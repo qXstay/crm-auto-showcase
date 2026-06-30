@@ -1,0 +1,55 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:demo:sqlite": "CRM_AUTO_PRISMA_CLIENT=sqlite next build",
+    "build:demo:sqlite:standalone": "CRM_AUTO_PRISMA_CLIENT=sqlite CRM_AUTO_STANDALONE=true next build",
+    "start": "next start",
+    "start:demo:sqlite": "CRM_AUTO_PRISMA_CLIENT=sqlite node prisma/start-demo-sqlite.mjs",
+    "start:demo:sqlite:hosted": "node prisma/start-demo-sqlite-hosted.mjs",
+    "start:demo:sqlite:standalone": "CRM_AUTO_PRISMA_CLIENT=sqlite CRM_AUTO_DEMO_SERVER_SCRIPT=.next/standalone/server.js node prisma/start-demo-sqlite.mjs",
+    "start:demo:sqlite:standalone:hosted": "CRM_AUTO_DEMO_SERVER_SCRIPT=.next/standalone/server.js node prisma/start-demo-sqlite-hosted.mjs",
+    "lint": "eslint",
+    "db:generate": "prisma generate",
+    "db:generate:sqlite": "prisma generate --schema prisma/schema.sqlite.prisma",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "node prisma/seed.mjs",
+    "db:seed:sqlite": "node prisma/seed.mjs --force-reset",
+    "db:push:sqlite": "sh prisma/db-push-sqlite.sh",
+    "db:configure:sqlite": "node prisma/configure-sqlite.mjs",
+    "db:validate:sqlite": "prisma validate --schema prisma/schema.sqlite.prisma",
+    "pack:demo:sqlite:standalone": "node prisma/pack-standalone-demo.mjs",
+    "demo:reset": "node prisma/seed.mjs --demo-reset",
+    "reset-loop:demo:sqlite": "CRM_AUTO_PRISMA_CLIENT=sqlite node prisma/demo-reset-loop.mjs",
+    "smoke": "npx playwright test --config=playwright.config.ts",
+    "smoke:headed": "npx playwright test --config=playwright.config.ts --headed",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.18.0",
+    "argon2": "^0.44.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.577.0",
+    "next": "16.1.6",
+    "prisma": "^6.18.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.mjs"
+  }
+}

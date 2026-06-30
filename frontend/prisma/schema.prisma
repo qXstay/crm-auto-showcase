@@ -1,0 +1,637 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserAuthStatus {
+  ACTIVE
+  DISABLED
+}
+
+model Branch {
+  id                      String                         @id
+  code                    String                         @unique
+  name                    String
+  displayName             String
+  address                 String
+  phone                   String?
+  isActive                Boolean                        @default(true)
+  createdAt               DateTime                       @default(now())
+  updatedAt               DateTime                       @updatedAt
+  profile                 BranchProfile?
+  printSettings           BranchPrintSettings?
+  paymentAccounts         PaymentAccount[]
+  bookingSettings         BookingSettings?
+  clientSourceSettings    ClientSourceSettings?
+  storageSettings         StorageSettings?
+  employeeAccesses        EmployeeBranchAccess[]
+  sessions                Session[]                      @relation("CurrentBranchSessions")
+  auditEvents             AuditEvent[]
+  shifts                  Shift[]
+  orders                  Order[]
+  bookings                Booking[]
+  storageRecords          StorageRecord[]
+  servicePricingOverrides BranchServicePricingOverride[]
+  salaryRuleOverrides     BranchSalaryRuleOverride[]
+}
+
+model User {
+  id           String         @id
+  login        String?        @unique
+  phone        String?        @unique
+  passwordHash String?
+  pinHash      String?
+  authStatus   UserAuthStatus @default(ACTIVE)
+  isActive     Boolean        @default(true)
+  lastLoginAt  DateTime?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  employee     Employee?
+  sessions     Session[]
+  auditEvents  AuditEvent[]   @relation("AuditActorUser")
+}
+
+model Role {
+  id              String           @id
+  name            String
+  systemKey       String?
+  isSystem        Boolean          @default(false)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  employees       Employee[]
+  rolePermissions RolePermission[]
+}
+
+model Permission {
+  id              String           @id
+  groupKey        String
+  actionKey       String
+  label           String
+  createdAt       DateTime         @default(now())
+  rolePermissions RolePermission[]
+}
+
+model RolePermission {
+  roleId       String
+  permissionId String
+  role         Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permission   Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+
+  @@id([roleId, permissionId])
+}
+
+model Employee {
+  id                      String                 @id
+  userId                  String?                @unique
+  phone                   String
+  firstName               String
+  lastName                String
+  middleName              String
+  roleId                  String
+  hiredAt                 DateTime?
+  firedAt                 DateTime?
+  lastActivityAt          DateTime?
+  skillLevel              String?
+  workPercent             Decimal                @db.Decimal(5, 2)
+  shiftMinimum            Decimal                @db.Decimal(10, 2)
+  addMinimumToWorkPercent Boolean                @default(false)
+  canBeAssignedExecutor   Boolean                @default(true)
+  createdAt               DateTime               @default(now())
+  updatedAt               DateTime               @updatedAt
+  user                    User?                  @relation(fields: [userId], references: [id], onDelete: SetNull)
+  role                    Role                   @relation(fields: [roleId], references: [id], onDelete: Restrict)
+  branchAccesses          EmployeeBranchAccess[]
+  sessions                Session[]
+  auditEvents             AuditEvent[]           @relation("AuditActorEmployee")
+  openedShifts            Shift[]                @relation("OpenedByEmployee")
+  shiftStaff              ShiftStaff[]
+  executedOrders          Order[]                @relation("ExecutorEmployee")
+  orderExecutors          OrderExecutor[]
+  payrollPayouts          OrderPayrollPayout[]
+  createdBookings         Booking[]              @relation("CreatedBookings")
+}
+
+model EmployeeBranchAccess {
+  employeeId    String
+  branchId      String
+  isDefault     Boolean  @default(false)
+  canOperate    Boolean  @default(true)
+  canSwitchInto Boolean  @default(true)
+  employee      Employee @relation(fields: [employeeId], references: [id], onDelete: Cascade)
+  branch        Branch   @relation(fields: [branchId], references: [id], onDelete: Cascade)
+
+  @@id([employeeId, branchId])
+}
+
+model Session {
+  id              String   @id
+  tokenHash       String   @unique
+  userId          String
+  employeeId      String
+  roleIdSnapshot  String
+  currentBranchId String
+  expiresAt       DateTime
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  lastSeenAt      DateTime @default(now())
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  employee        Employee @relation(fields: [employeeId], references: [id], onDelete: Cascade)
+  currentBranch   Branch   @relation("CurrentBranchSessions", fields: [currentBranchId], references: [id], onDelete: Cascade)
+}
+
+model AuditEvent {
+  id              String    @id
+  eventType       String
+  actorUserId     String?
+  actorEmployeeId String?
+  branchId        String?
+  entityType      String
+  entityId        String
+  payloadJson     Json
+  createdAt       DateTime  @default(now())
+  actorUser       User?     @relation("AuditActorUser", fields: [actorUserId], references: [id], onDelete: SetNull)
+  actorEmployee   Employee? @relation("AuditActorEmployee", fields: [actorEmployeeId], references: [id], onDelete: SetNull)
+  branch          Branch?   @relation(fields: [branchId], references: [id], onDelete: SetNull)
+
+  @@index([eventType, createdAt])
+  @@index([entityType, entityId, createdAt])
+}
+
+model BranchProfile {
+  branchId      String   @id
+  legalName     String
+  displayName   String
+  address       String
+  phone         String?
+  timezoneLabel String
+  workStart     String
+  workEnd       String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  branch        Branch   @relation(fields: [branchId], references: [id], onDelete: Cascade)
+}
+
+model BranchPrintSettings {
+  branchId     String   @id
+  receiptTitle String
+  footerNote   String?
+  showPhone    Boolean  @default(true)
+  showAddress  Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  branch       Branch   @relation(fields: [branchId], references: [id], onDelete: Cascade)
+}
+
+model PaymentAccount {
+  id          String    @id
+  branchId    String
+  name        String
+  isArchived  Boolean   @default(false)
+  isProtected Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  branch      Branch    @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  payments    Payment[]
+
+  @@index([branchId, isArchived])
+}
+
+model BookingSettings {
+  branchId             String   @id
+  publicSlug           String
+  onlineEnabled        Boolean  @default(true)
+  slotWindowMinutes    Int      @default(15)
+  allowPostChoice      Boolean  @default(true)
+  allowMultipleWindows Boolean  @default(false)
+  metricsId            String?
+  telegramChatId       String?
+  postsJson            Json
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+  branch               Branch   @relation(fields: [branchId], references: [id], onDelete: Cascade)
+}
+
+model StorageSettings {
+  branchId       String   @id
+  warehousesJson Json
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  branch         Branch   @relation(fields: [branchId], references: [id], onDelete: Cascade)
+}
+
+model ClientSourceSettings {
+  branchId    String   @id
+  sourcesJson Json
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  branch      Branch   @relation(fields: [branchId], references: [id], onDelete: Cascade)
+}
+
+model Service {
+  id                     String                         @id
+  categoryKey            String
+  categoryLabelSnapshot  String
+  name                   String
+  serviceType            String
+  pricingMode            String
+  priceType              String
+  isActive               Boolean                        @default(true)
+  sortOrder              Int                            @default(0)
+  createdAt              DateTime                       @default(now())
+  updatedAt              DateTime                       @updatedAt
+  pricingMetadata        ServicePricingMetadata?
+  salaryRule             SalaryRule?
+  branchPricingOverrides BranchServicePricingOverride[]
+  branchSalaryOverrides  BranchSalaryRuleOverride[]
+  orderLines             OrderLine[]
+
+  @@index([categoryKey, sortOrder])
+  @@index([isActive])
+}
+
+model ServiceCategory {
+  id        String   @id
+  name      String
+  sortOrder Int      @default(0)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([isActive, sortOrder])
+}
+
+model ServicePricingMetadata {
+  serviceId                     String   @id
+  fixedPrice                    Decimal? @db.Decimal(10, 2)
+  priceFrom                     Decimal? @db.Decimal(10, 2)
+  matrixPricesJson              Json
+  modifierEnabledJson           Json
+  modifierMatrixPricesJson      Json
+  modifierExplicitlyClearedJson Json
+  priceBandsJson                Json
+  displayPriceLabelOverride     String?
+  costPrice                     Decimal? @db.Decimal(10, 2)
+  createdAt                     DateTime @default(now())
+  updatedAt                     DateTime @updatedAt
+  service                       Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+}
+
+model SalaryRule {
+  serviceId                     String   @id
+  ruleType                      String
+  salaryPercent                 Decimal? @db.Decimal(10, 2)
+  salaryFixedAmount             Decimal? @db.Decimal(10, 2)
+  salaryPerUnitAmount           Decimal? @db.Decimal(10, 2)
+  usesCostPrice                 Boolean  @default(false)
+  reducedEmployeePercentEnabled Boolean  @default(false)
+  reducedEmployeePercentValue   Decimal? @db.Decimal(10, 2)
+  createdAt                     DateTime @default(now())
+  updatedAt                     DateTime @updatedAt
+  service                       Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+}
+
+model BranchServicePricingOverride {
+  branchId                      String
+  serviceId                     String
+  fixedPrice                    Decimal? @db.Decimal(10, 2)
+  priceFrom                     Decimal? @db.Decimal(10, 2)
+  matrixPricesJson              Json?
+  modifierEnabledJson           Json?
+  modifierMatrixPricesJson      Json?
+  modifierExplicitlyClearedJson Json?
+  priceBandsJson                Json?
+  displayPriceLabelOverride     String?
+  costPrice                     Decimal? @db.Decimal(10, 2)
+  createdAt                     DateTime @default(now())
+  updatedAt                     DateTime @updatedAt
+  branch                        Branch   @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  service                       Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  @@id([branchId, serviceId])
+}
+
+model BranchSalaryRuleOverride {
+  branchId                      String
+  serviceId                     String
+  ruleType                      String?
+  salaryPercent                 Decimal? @db.Decimal(10, 2)
+  salaryFixedAmount             Decimal? @db.Decimal(10, 2)
+  salaryPerUnitAmount           Decimal? @db.Decimal(10, 2)
+  usesCostPrice                 Boolean?
+  reducedEmployeePercentEnabled Boolean?
+  reducedEmployeePercentValue   Decimal? @db.Decimal(10, 2)
+  createdAt                     DateTime @default(now())
+  updatedAt                     DateTime @updatedAt
+  branch                        Branch   @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  service                       Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  @@id([branchId, serviceId])
+}
+
+model Client {
+  id             String          @id
+  fullName       String
+  shortName      String
+  firstName      String
+  lastName       String
+  middleName     String
+  phone          String
+  email          String?
+  source         String?
+  note           String?
+  registeredAt   DateTime?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  vehicles       Vehicle[]
+  orders         Order[]
+  bookings       Booking[]
+  storageRecords StorageRecord[]
+
+  @@index([phone])
+}
+
+model Vehicle {
+  id             String          @id
+  clientId       String
+  label          String
+  brand          String
+  model          String
+  plateNumber    String
+  radius         String
+  totalSpent     Decimal?        @db.Decimal(10, 2)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  client         Client          @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  orders         Order[]
+  bookings       Booking[]
+  storageRecords StorageRecord[]
+
+  @@index([clientId])
+}
+
+model Shift {
+  id                           String                @id
+  branchId                     String
+  number                       Int
+  status                       String
+  openedAt                     DateTime
+  closedAt                     DateTime?
+  openedByEmployeeId           String?
+  staffLabelSnapshot           String?
+  expensesItemsJson            Json
+  ordersCountSnapshot          Int?
+  revenueTotalSnapshot         Decimal?              @db.Decimal(10, 2)
+  cashTotalSnapshot            Decimal?              @db.Decimal(10, 2)
+  cashlessTotalSnapshot        Decimal?              @db.Decimal(10, 2)
+  expensesTotalSnapshot        Decimal?              @db.Decimal(10, 2)
+  salaryFundTotalSnapshot      Decimal?              @db.Decimal(10, 2)
+  accountBreakdownSnapshotJson Json?
+  createdAt                    DateTime              @default(now())
+  updatedAt                    DateTime              @updatedAt
+  branch                       Branch                @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  openedByEmployee             Employee?             @relation("OpenedByEmployee", fields: [openedByEmployeeId], references: [id], onDelete: SetNull)
+  staff                        ShiftStaff[]
+  orders                       Order[]
+  payrollAccruals              OrderPayrollAccrual[]
+
+  @@unique([branchId, number])
+  @@index([branchId, status, openedAt])
+}
+
+model ShiftStaff {
+  id                   String    @id
+  shiftId              String
+  employeeId           String?
+  employeeNameSnapshot String
+  workPercentSnapshot  Decimal?  @db.Decimal(10, 2)
+  shiftMinimumSnapshot Decimal?  @db.Decimal(10, 2)
+  skillLevelSnapshot   String?
+  arrivedAt            DateTime?
+  leftAt               DateTime?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+  shift                Shift     @relation(fields: [shiftId], references: [id], onDelete: Cascade)
+  employee             Employee? @relation(fields: [employeeId], references: [id], onDelete: SetNull)
+
+  @@index([shiftId])
+}
+
+model Order {
+  id                          String                @id
+  branchId                    String
+  number                      Int
+  createdAt                   DateTime
+  updatedAt                   DateTime
+  completedAt                 DateTime?
+  status                      String
+  clientId                    String?
+  vehicleId                   String?
+  shiftId                     String?
+  executorEmployeeId          String?
+  vehicleType                 String
+  radius                      String
+  lowProfile                  Boolean               @default(false)
+  runflat                     Boolean               @default(false)
+  salaryAccrualTotal          Decimal?              @db.Decimal(10, 2)
+  subtotal                    Decimal?              @db.Decimal(10, 2)
+  discount                    Decimal?              @db.Decimal(10, 2)
+  totalAmount                 Decimal               @db.Decimal(10, 2)
+  servicesCount               Int                   @default(0)
+  note                        String?
+  clientSnapshotJson          Json
+  vehicleSnapshotJson         Json?
+  executorSnapshotJson        Json?
+  shiftSnapshotJson           Json?
+  paymentSnapshotJson         Json?
+  totalsSnapshotJson          Json?
+  payoutBreakdownSnapshotJson Json?
+  printSnapshotJson           Json?
+  branch                      Branch                @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  client                      Client?               @relation(fields: [clientId], references: [id], onDelete: SetNull)
+  vehicle                     Vehicle?              @relation(fields: [vehicleId], references: [id], onDelete: SetNull)
+  shift                       Shift?                @relation(fields: [shiftId], references: [id], onDelete: SetNull)
+  executorEmployee            Employee?             @relation("ExecutorEmployee", fields: [executorEmployeeId], references: [id], onDelete: SetNull)
+  lines                       OrderLine[]
+  payments                    Payment[]
+  executors                   OrderExecutor[]
+  payrollAccruals             OrderPayrollAccrual[]
+
+  @@unique([branchId, number])
+  @@index([branchId, status, createdAt])
+  @@index([shiftId, createdAt])
+}
+
+model OrderExecutor {
+  id                   String               @id
+  orderId              String
+  employeeId           String?
+  employeeNameSnapshot String
+  skillLevelSnapshot   String?
+  workPercentSnapshot  Decimal?             @db.Decimal(10, 2)
+  sortOrder            Int                  @default(0)
+  createdAt            DateTime             @default(now())
+  updatedAt            DateTime             @updatedAt
+  order                Order                @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  employee             Employee?            @relation(fields: [employeeId], references: [id], onDelete: SetNull)
+  payrollPayouts       OrderPayrollPayout[]
+
+  @@index([orderId])
+}
+
+model OrderLine {
+  id                        String   @id
+  orderId                   String
+  serviceId                 String?
+  sortOrder                 Int      @default(0)
+  quantity                  Decimal  @db.Decimal(10, 2)
+  unitPrice                 Decimal  @db.Decimal(10, 2)
+  lineTotal                 Decimal  @db.Decimal(10, 2)
+  serviceNameSnapshot       String
+  serviceCategorySnapshot   String?
+  costPriceSnapshot         Decimal? @db.Decimal(10, 2)
+  salaryAccrualAmount       Decimal? @db.Decimal(10, 2)
+  pricingSnapshotJson       Json
+  salaryRuleSnapshotJson    Json?
+  lineContextSnapshotJson   Json?
+  salaryAccrualSnapshotJson Json?
+  createdAt                 DateTime @default(now())
+  updatedAt                 DateTime @updatedAt
+  order                     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  service                   Service? @relation(fields: [serviceId], references: [id], onDelete: SetNull)
+
+  @@index([orderId, sortOrder])
+}
+
+model Payment {
+  id                  String               @id
+  orderId             String
+  accountId           String?
+  paymentMethod       String
+  amount              Decimal              @db.Decimal(10, 2)
+  paidAt              DateTime
+  paymentSnapshotJson Json
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime             @updatedAt
+  order               Order                @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  account             PaymentAccount?      @relation(fields: [accountId], references: [id], onDelete: SetNull)
+  payrollAccrual      OrderPayrollAccrual?
+
+  @@index([orderId, paidAt])
+}
+
+model PayrollFormulaSettings {
+  id                       String   @id
+  fourPlusLevelWeightsJson Json
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+}
+
+model OrderPayrollAccrual {
+  id                      String               @id
+  orderId                 String
+  paymentId               String               @unique
+  shiftId                 String?
+  status                  String
+  statusReason            String?
+  paymentAmountSnapshot   Decimal              @db.Decimal(10, 2)
+  payrollBaseAmount       Decimal              @db.Decimal(10, 2)
+  salaryFundAmount        Decimal?             @db.Decimal(10, 2)
+  calculationSnapshotJson Json
+  createdAt               DateTime             @default(now())
+  updatedAt               DateTime             @updatedAt
+  order                   Order                @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  payment                 Payment              @relation(fields: [paymentId], references: [id], onDelete: Cascade)
+  shift                   Shift?               @relation(fields: [shiftId], references: [id], onDelete: SetNull)
+  payouts                 OrderPayrollPayout[]
+
+  @@index([orderId])
+  @@index([shiftId])
+}
+
+model OrderPayrollPayout {
+  id                   String              @id
+  accrualId            String
+  orderExecutorId      String
+  employeeId           String?
+  employeeNameSnapshot String
+  skillLevelSnapshot   String?
+  sharePercent         Decimal?            @db.Decimal(10, 2)
+  weight               Decimal?            @db.Decimal(10, 2)
+  basisLabel           String
+  amount               Decimal             @db.Decimal(10, 2)
+  createdAt            DateTime            @default(now())
+  accrual              OrderPayrollAccrual @relation(fields: [accrualId], references: [id], onDelete: Cascade)
+  orderExecutor        OrderExecutor       @relation(fields: [orderExecutorId], references: [id], onDelete: Cascade)
+  employee             Employee?           @relation(fields: [employeeId], references: [id], onDelete: SetNull)
+
+  @@unique([accrualId, orderExecutorId])
+  @@index([employeeId])
+}
+
+model Booking {
+  id                  String    @id
+  groupId             String
+  branchId            String
+  clientId            String?
+  vehicleId           String?
+  anonymous           Boolean   @default(false)
+  clientNameSnapshot  String
+  phoneSnapshot       String
+  carSnapshot         String
+  dateKey             String
+  startTime           String
+  endTime             String
+  postId              String
+  serviceLabel        String
+  comment             String?
+  createdByEmployeeId String?
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+  clientSnapshotJson  Json?
+  vehicleSnapshotJson Json?
+  contactSnapshotJson Json?
+  branch              Branch    @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  client              Client?   @relation(fields: [clientId], references: [id], onDelete: SetNull)
+  vehicle             Vehicle?  @relation(fields: [vehicleId], references: [id], onDelete: SetNull)
+  createdByEmployee   Employee? @relation("CreatedBookings", fields: [createdByEmployeeId], references: [id], onDelete: SetNull)
+
+  @@index([branchId, dateKey, startTime])
+  @@index([groupId])
+}
+
+model StorageRecord {
+  id                  String    @id
+  branchId            String
+  storageNumber       String
+  clientId            String?
+  vehicleId           String?
+  clientNameSnapshot  String
+  clientPhoneSnapshot String
+  carBrandSnapshot    String
+  carModelSnapshot    String
+  plateNumberSnapshot String
+  itemLabelSnapshot   String
+  status              String
+  warehouseId         String?
+  warehouseName       String
+  shelfLabel          String
+  cellLabel           String
+  acceptedAt          DateTime
+  releasedAt          DateTime?
+  note                String?
+  clientSnapshotJson  Json?
+  vehicleSnapshotJson Json?
+  itemSnapshotJson    Json?
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+  branch              Branch    @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  client              Client?   @relation(fields: [clientId], references: [id], onDelete: SetNull)
+  vehicle             Vehicle?  @relation(fields: [vehicleId], references: [id], onDelete: SetNull)
+
+  @@unique([branchId, storageNumber])
+  @@index([branchId, status, acceptedAt])
+}

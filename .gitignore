@@ -1,0 +1,57 @@
+pegas-clean-source.zip
+
+qa_artifacts/
+.claude/settings.local.json
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Dependencies and build folders
+node_modules/
+.next/
+
+# Test reports
+playwright-report/
+test-results/
+
+# Database files
+*.db
+*.sqlite
+
+# Vercel
+.vercel/
+
+# local agent/browser artifacts
+.playwright-mcp/
+.agents/
+.codex/
+frontend/test-results/
+frontend/playwright-report/
+frontend/tests/smoke/report/
+frontend/tests/smoke/results/
+
+# Local demo database
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# Local env
+.env
+.env.*
+!.env.example
+
+# Build/runtime
+.next
+node_modules
+
+# Test artifacts
+playwright-report
+test-results
+coverage
+frontend/tests/smoke/report
+frontend/playwright-report
+frontend/test-results
+frontend/.playwright
+frontend/coverage

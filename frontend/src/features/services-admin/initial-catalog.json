@@ -1,0 +1,4844 @@
+[
+  {
+    "id": "main",
+    "name": "Основные услуги",
+    "services": [
+      {
+        "id": "main-package",
+        "categoryId": "main",
+        "name": "Комплекс шиномонтажа",
+        "serviceType": "base",
+        "pricingMode": "package",
+        "priceType": "matrix",
+        "fixedPrice": 0,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 2520,
+            "suv": 2880,
+            "offroad": 0,
+            "commercial": 4000
+          },
+          "R14": {
+            "passenger": 2520,
+            "suv": 2880,
+            "offroad": 0,
+            "commercial": 4000
+          },
+          "R15": {
+            "passenger": 2680,
+            "suv": 2880,
+            "offroad": 3320,
+            "commercial": 4000
+          },
+          "R16": {
+            "passenger": 2880,
+            "suv": 3200,
+            "offroad": 3640,
+            "commercial": 4000
+          },
+          "R17": {
+            "passenger": 3440,
+            "suv": 3520,
+            "offroad": 3840,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 3680,
+            "suv": 3920,
+            "offroad": 4200,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 4160,
+            "suv": 4280,
+            "offroad": 4720,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 4160,
+            "suv": 4280,
+            "offroad": 4720,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 5360,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 5360,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 5360,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {
+          "low_profile": {
+            "R13": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R14": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R15": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R16": {
+              "passenger": 3360,
+              "suv": 3760,
+              "offroad": 4120,
+              "commercial": 0
+            },
+            "R17": {
+              "passenger": 3560,
+              "suv": 4120,
+              "offroad": 4320,
+              "commercial": 0
+            },
+            "R18": {
+              "passenger": 3680,
+              "suv": 4480,
+              "offroad": 4680,
+              "commercial": 0
+            },
+            "R19": {
+              "passenger": 4160,
+              "suv": 5120,
+              "offroad": 5200,
+              "commercial": 0
+            },
+            "R20": {
+              "passenger": 4160,
+              "suv": 5120,
+              "offroad": 5200,
+              "commercial": 0
+            },
+            "R21": {
+              "passenger": 5120,
+              "suv": 5680,
+              "offroad": 5760,
+              "commercial": 0
+            },
+            "R22": {
+              "passenger": 5120,
+              "suv": 5680,
+              "offroad": 5760,
+              "commercial": 0
+            },
+            "R23": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 5760,
+              "commercial": 0
+            }
+          },
+          "runflat": {
+            "R13": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R14": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R15": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R16": {
+              "passenger": 3760,
+              "suv": 0,
+              "offroad": 4120,
+              "commercial": 0
+            },
+            "R17": {
+              "passenger": 3920,
+              "suv": 4600,
+              "offroad": 4320,
+              "commercial": 0
+            },
+            "R18": {
+              "passenger": 4160,
+              "suv": 4880,
+              "offroad": 4680,
+              "commercial": 0
+            },
+            "R19": {
+              "passenger": 4640,
+              "suv": 5600,
+              "offroad": 5200,
+              "commercial": 0
+            },
+            "R20": {
+              "passenger": 4640,
+              "suv": 5600,
+              "offroad": 5200,
+              "commercial": 0
+            },
+            "R21": {
+              "passenger": 5600,
+              "suv": 6160,
+              "offroad": 5760,
+              "commercial": 0
+            },
+            "R22": {
+              "passenger": 5600,
+              "suv": 6160,
+              "offroad": 5760,
+              "commercial": 0
+            },
+            "R23": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 5760,
+              "commercial": 0
+            }
+          }
+        },
+        "modifierEnabled": {
+          "low_profile": true,
+          "runflat": true
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 2 520 ₽ до 5 360 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": true,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "installation",
+        "categoryId": "main",
+        "name": "Снятие / Установка колеса",
+        "serviceType": "base",
+        "pricingMode": "service",
+        "priceType": "matrix",
+        "fixedPrice": 0,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 230,
+            "suv": 250,
+            "offroad": 0,
+            "commercial": 325
+          },
+          "R14": {
+            "passenger": 230,
+            "suv": 250,
+            "offroad": 0,
+            "commercial": 325
+          },
+          "R15": {
+            "passenger": 230,
+            "suv": 250,
+            "offroad": 290,
+            "commercial": 325
+          },
+          "R16": {
+            "passenger": 240,
+            "suv": 265,
+            "offroad": 310,
+            "commercial": 325
+          },
+          "R17": {
+            "passenger": 250,
+            "suv": 290,
+            "offroad": 335,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 280,
+            "suv": 315,
+            "offroad": 370,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 310,
+            "suv": 360,
+            "offroad": 400,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 310,
+            "suv": 360,
+            "offroad": 400,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 360,
+            "suv": 400,
+            "offroad": 450,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 360,
+            "suv": 400,
+            "offroad": 450,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 450,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 230 ₽ до 450 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "demount",
+        "categoryId": "main",
+        "name": "Демонтаж шины",
+        "serviceType": "base",
+        "pricingMode": "service",
+        "priceType": "matrix",
+        "fixedPrice": 0,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 100,
+            "suv": 120,
+            "offroad": 0,
+            "commercial": 170
+          },
+          "R14": {
+            "passenger": 100,
+            "suv": 120,
+            "offroad": 0,
+            "commercial": 170
+          },
+          "R15": {
+            "passenger": 120,
+            "suv": 120,
+            "offroad": 145,
+            "commercial": 170
+          },
+          "R16": {
+            "passenger": 130,
+            "suv": 145,
+            "offroad": 170,
+            "commercial": 170
+          },
+          "R17": {
+            "passenger": 185,
+            "suv": 165,
+            "offroad": 180,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 185,
+            "suv": 190,
+            "offroad": 190,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 210,
+            "suv": 180,
+            "offroad": 215,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 210,
+            "suv": 180,
+            "offroad": 215,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 250,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 250,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 250,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {
+          "low_profile": {
+            "R13": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R14": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R15": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R16": {
+              "passenger": 190,
+              "suv": 215,
+              "offroad": 230,
+              "commercial": 0
+            },
+            "R17": {
+              "passenger": 200,
+              "suv": 240,
+              "offroad": 240,
+              "commercial": 0
+            },
+            "R18": {
+              "passenger": 0,
+              "suv": 260,
+              "offroad": 250,
+              "commercial": 0
+            },
+            "R19": {
+              "passenger": 0,
+              "suv": 285,
+              "offroad": 275,
+              "commercial": 0
+            },
+            "R20": {
+              "passenger": 0,
+              "suv": 285,
+              "offroad": 275,
+              "commercial": 0
+            },
+            "R21": {
+              "passenger": 285,
+              "suv": 320,
+              "offroad": 300,
+              "commercial": 0
+            },
+            "R22": {
+              "passenger": 285,
+              "suv": 320,
+              "offroad": 300,
+              "commercial": 0
+            },
+            "R23": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 300,
+              "commercial": 0
+            }
+          },
+          "runflat": {
+            "R13": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R14": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R15": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R16": {
+              "passenger": 240,
+              "suv": 0,
+              "offroad": 230,
+              "commercial": 0
+            },
+            "R17": {
+              "passenger": 245,
+              "suv": 300,
+              "offroad": 240,
+              "commercial": 0
+            },
+            "R18": {
+              "passenger": 245,
+              "suv": 310,
+              "offroad": 250,
+              "commercial": 0
+            },
+            "R19": {
+              "passenger": 270,
+              "suv": 345,
+              "offroad": 275,
+              "commercial": 0
+            },
+            "R20": {
+              "passenger": 270,
+              "suv": 345,
+              "offroad": 275,
+              "commercial": 0
+            },
+            "R21": {
+              "passenger": 345,
+              "suv": 380,
+              "offroad": 300,
+              "commercial": 0
+            },
+            "R22": {
+              "passenger": 345,
+              "suv": 380,
+              "offroad": 300,
+              "commercial": 0
+            },
+            "R23": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 300,
+              "commercial": 0
+            }
+          }
+        },
+        "modifierEnabled": {
+          "low_profile": true,
+          "runflat": true
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 100 ₽ до 250 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "mount",
+        "categoryId": "main",
+        "name": "Монтаж шины",
+        "serviceType": "base",
+        "pricingMode": "service",
+        "priceType": "matrix",
+        "fixedPrice": 0,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 100,
+            "suv": 120,
+            "offroad": 0,
+            "commercial": 170
+          },
+          "R14": {
+            "passenger": 100,
+            "suv": 120,
+            "offroad": 0,
+            "commercial": 170
+          },
+          "R15": {
+            "passenger": 120,
+            "suv": 120,
+            "offroad": 145,
+            "commercial": 170
+          },
+          "R16": {
+            "passenger": 130,
+            "suv": 145,
+            "offroad": 170,
+            "commercial": 170
+          },
+          "R17": {
+            "passenger": 185,
+            "suv": 165,
+            "offroad": 180,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 185,
+            "suv": 190,
+            "offroad": 190,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 210,
+            "suv": 180,
+            "offroad": 215,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 210,
+            "suv": 180,
+            "offroad": 215,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 250,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 250,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 250,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {
+          "low_profile": {
+            "R13": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R14": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R15": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R16": {
+              "passenger": 190,
+              "suv": 215,
+              "offroad": 230,
+              "commercial": 0
+            },
+            "R17": {
+              "passenger": 200,
+              "suv": 240,
+              "offroad": 240,
+              "commercial": 0
+            },
+            "R18": {
+              "passenger": 0,
+              "suv": 260,
+              "offroad": 250,
+              "commercial": 0
+            },
+            "R19": {
+              "passenger": 0,
+              "suv": 285,
+              "offroad": 275,
+              "commercial": 0
+            },
+            "R20": {
+              "passenger": 0,
+              "suv": 285,
+              "offroad": 275,
+              "commercial": 0
+            },
+            "R21": {
+              "passenger": 285,
+              "suv": 320,
+              "offroad": 300,
+              "commercial": 0
+            },
+            "R22": {
+              "passenger": 285,
+              "suv": 320,
+              "offroad": 300,
+              "commercial": 0
+            },
+            "R23": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 300,
+              "commercial": 0
+            }
+          },
+          "runflat": {
+            "R13": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R14": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R15": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 0,
+              "commercial": 0
+            },
+            "R16": {
+              "passenger": 240,
+              "suv": 0,
+              "offroad": 230,
+              "commercial": 0
+            },
+            "R17": {
+              "passenger": 245,
+              "suv": 300,
+              "offroad": 240,
+              "commercial": 0
+            },
+            "R18": {
+              "passenger": 245,
+              "suv": 310,
+              "offroad": 250,
+              "commercial": 0
+            },
+            "R19": {
+              "passenger": 270,
+              "suv": 345,
+              "offroad": 275,
+              "commercial": 0
+            },
+            "R20": {
+              "passenger": 270,
+              "suv": 345,
+              "offroad": 275,
+              "commercial": 0
+            },
+            "R21": {
+              "passenger": 345,
+              "suv": 380,
+              "offroad": 300,
+              "commercial": 0
+            },
+            "R22": {
+              "passenger": 345,
+              "suv": 380,
+              "offroad": 300,
+              "commercial": 0
+            },
+            "R23": {
+              "passenger": 0,
+              "suv": 0,
+              "offroad": 300,
+              "commercial": 0
+            }
+          }
+        },
+        "modifierEnabled": {
+          "low_profile": true,
+          "runflat": true
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 100 ₽ до 250 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "balancing",
+        "categoryId": "main",
+        "name": "Балансировка колеса",
+        "serviceType": "base",
+        "pricingMode": "service",
+        "priceType": "matrix",
+        "fixedPrice": 0,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 200,
+            "suv": 230,
+            "offroad": 0,
+            "commercial": 335
+          },
+          "R14": {
+            "passenger": 200,
+            "suv": 230,
+            "offroad": 0,
+            "commercial": 335
+          },
+          "R15": {
+            "passenger": 200,
+            "suv": 230,
+            "offroad": 250,
+            "commercial": 335
+          },
+          "R16": {
+            "passenger": 220,
+            "suv": 245,
+            "offroad": 260,
+            "commercial": 335
+          },
+          "R17": {
+            "passenger": 240,
+            "suv": 260,
+            "offroad": 265,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 270,
+            "suv": 285,
+            "offroad": 300,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 310,
+            "suv": 350,
+            "offroad": 350,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 310,
+            "suv": 350,
+            "offroad": 350,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 350,
+            "suv": 380,
+            "offroad": 390,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 350,
+            "suv": 380,
+            "offroad": 390,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 390,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 200 ₽ до 390 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "washing",
+        "categoryId": "main",
+        "name": "Мойка 1 колеса / чистка колеса",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "matrix",
+        "fixedPrice": 0,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 60,
+            "suv": 80,
+            "offroad": 0,
+            "commercial": 150
+          },
+          "R14": {
+            "passenger": 60,
+            "suv": 80,
+            "offroad": 0,
+            "commercial": 150
+          },
+          "R15": {
+            "passenger": 60,
+            "suv": 80,
+            "offroad": 110,
+            "commercial": 150
+          },
+          "R16": {
+            "passenger": 80,
+            "suv": 80,
+            "offroad": 110,
+            "commercial": 150
+          },
+          "R17": {
+            "passenger": 80,
+            "suv": 90,
+            "offroad": 110,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 90,
+            "suv": 90,
+            "offroad": 130,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 90,
+            "suv": 110,
+            "offroad": 150,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 90,
+            "suv": 110,
+            "offroad": 150,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 110,
+            "suv": 110,
+            "offroad": 150,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 110,
+            "suv": 110,
+            "offroad": 150,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 150,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 60 ₽ до 150 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      }
+    ]
+  },
+  {
+    "id": "repair",
+    "name": "Ремонт шин",
+    "services": [
+      {
+        "id": "plug",
+        "categoryId": "repair",
+        "name": "Ремонт жгутом",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 400,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "400 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "patch",
+        "categoryId": "repair",
+        "name": "Пластырь универсальный",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 500,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "500 ₽",
+        "displayPriceLabelOverride": "500 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "mushroom",
+        "categoryId": "repair",
+        "name": "Грибок",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "from",
+        "fixedPrice": 0,
+        "priceFrom": 600,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 600 ₽",
+        "priceBands": [
+          {
+            "label": "R8, R10, R11",
+            "radiusLabels": [
+              "R8",
+              "R10",
+              "R11"
+            ],
+            "price": 1300
+          },
+          {
+            "label": "R12, R13, R14, R15, R18, R19",
+            "radiusLabels": [
+              "R12",
+              "R13",
+              "R14",
+              "R15",
+              "R18",
+              "R19"
+            ],
+            "price": 1500
+          },
+          {
+            "label": "R20, R201, R202, R22, R23, R251, R252, R33",
+            "radiusLabels": [
+              "R20",
+              "R201",
+              "R202",
+              "R22",
+              "R23",
+              "R251",
+              "R252",
+              "R33"
+            ],
+            "price": 2000
+          }
+        ],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "camera-repair",
+        "categoryId": "repair",
+        "name": "Ремонт камеры с материалом",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 350,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "350 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "cosmetic-repair",
+        "categoryId": "repair",
+        "name": "Косметический ремонт шины",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "from",
+        "fixedPrice": 0,
+        "priceFrom": 700,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 700 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      }
+    ]
+  },
+  {
+    "id": "disks",
+    "name": "Покраска и ремонт дисков",
+    "services": [
+      {
+        "id": "steel-disk",
+        "categoryId": "disks",
+        "name": "Правка штампованного диска",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "from",
+        "fixedPrice": 0,
+        "priceFrom": 700,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 700 ₽",
+        "priceBands": [
+          {
+            "label": "R13",
+            "radiusLabels": [
+              "R13"
+            ],
+            "price": 700
+          },
+          {
+            "label": "R14",
+            "radiusLabels": [
+              "R14"
+            ],
+            "price": 700
+          },
+          {
+            "label": "R15",
+            "radiusLabels": [
+              "R15"
+            ],
+            "price": 900
+          },
+          {
+            "label": "R16",
+            "radiusLabels": [
+              "R16"
+            ],
+            "price": 1000
+          },
+          {
+            "label": "R17+",
+            "radiusLabels": [
+              "R17",
+              "R18",
+              "R19",
+              "R20",
+              "R21",
+              "R22",
+              "R23"
+            ],
+            "price": 1500
+          }
+        ],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "steel-disk-eight",
+        "categoryId": "disks",
+        "name": "Правка штампованного диска с восьмёркой",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "from",
+        "fixedPrice": 0,
+        "priceFrom": 1050,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 1 050 ₽",
+        "priceBands": [
+          {
+            "label": "R13",
+            "radiusLabels": [
+              "R13"
+            ],
+            "price": 1050
+          },
+          {
+            "label": "R14",
+            "radiusLabels": [
+              "R14"
+            ],
+            "price": 1050
+          },
+          {
+            "label": "R15",
+            "radiusLabels": [
+              "R15"
+            ],
+            "price": 1350
+          },
+          {
+            "label": "R16",
+            "radiusLabels": [
+              "R16"
+            ],
+            "price": 1500
+          },
+          {
+            "label": "R17+",
+            "radiusLabels": [
+              "R17",
+              "R18",
+              "R19",
+              "R20",
+              "R21",
+              "R22",
+              "R23"
+            ],
+            "price": 2250
+          }
+        ],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "cast-disk",
+        "categoryId": "disks",
+        "name": "Правка литого диска",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "matrix",
+        "fixedPrice": 0,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 1400,
+            "suv": 1400,
+            "offroad": 1400,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 1400,
+            "suv": 1400,
+            "offroad": 1400,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 1500,
+            "suv": 1500,
+            "offroad": 1500,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 1800,
+            "suv": 1800,
+            "offroad": 1800,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 2100,
+            "suv": 2100,
+            "offroad": 2100,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 2500,
+            "suv": 2500,
+            "offroad": 2500,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 3000,
+            "suv": 3000,
+            "offroad": 3000,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 3500,
+            "suv": 3500,
+            "offroad": 3500,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 4000,
+            "suv": 4000,
+            "offroad": 4000,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 4000,
+            "suv": 4000,
+            "offroad": 4000,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 4000,
+            "suv": 4000,
+            "offroad": 4000,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 1 400 ₽ до 4 000 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "cast-disk-eight",
+        "categoryId": "disks",
+        "name": "Правка литого диска с восьмёркой",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "matrix",
+        "fixedPrice": 0,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 2000,
+            "suv": 2000,
+            "offroad": 2000,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 2000,
+            "suv": 2000,
+            "offroad": 2000,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 2400,
+            "suv": 2400,
+            "offroad": 2400,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 2600,
+            "suv": 2600,
+            "offroad": 2600,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 3000,
+            "suv": 3000,
+            "offroad": 3000,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 3600,
+            "suv": 3600,
+            "offroad": 3600,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 4000,
+            "suv": 4000,
+            "offroad": 4000,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 5000,
+            "suv": 5000,
+            "offroad": 5000,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 5600,
+            "suv": 5600,
+            "offroad": 5600,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 5600,
+            "suv": 5600,
+            "offroad": 5600,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 5600,
+            "suv": 5600,
+            "offroad": 5600,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 2 000 ₽ до 5 600 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "forged-disk",
+        "categoryId": "disks",
+        "name": "Правка кованого диска",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "matrix",
+        "fixedPrice": 0,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 1700,
+            "suv": 1700,
+            "offroad": 1700,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 1700,
+            "suv": 1700,
+            "offroad": 1700,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 2000,
+            "suv": 2000,
+            "offroad": 2000,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 2400,
+            "suv": 2400,
+            "offroad": 2400,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 2600,
+            "suv": 2600,
+            "offroad": 2600,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 3300,
+            "suv": 3300,
+            "offroad": 3300,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 3900,
+            "suv": 3900,
+            "offroad": 3900,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 4500,
+            "suv": 4500,
+            "offroad": 4500,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 5200,
+            "suv": 5200,
+            "offroad": 5200,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 5200,
+            "suv": 5200,
+            "offroad": 5200,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 5200,
+            "suv": 5200,
+            "offroad": 5200,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 1 700 ₽ до 5 200 ₽",
+        "displayPriceLabelOverride": "от 1 700 ₽ до 5 200 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "valve-china",
+        "categoryId": "disks",
+        "name": "Установка вентиля Китай",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 50,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "50 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "valve-tech",
+        "categoryId": "disks",
+        "name": "Установка вентиля Tech",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 100,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "100 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "painting",
+        "categoryId": "disks",
+        "name": "Покраска дисков",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "from",
+        "fixedPrice": 0,
+        "priceFrom": 2000,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 2 000 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_profit",
+        "salaryPercent": 20,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": true,
+        "costPrice": 1200,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "argon",
+        "categoryId": "disks",
+        "name": "Сварка аргоном (1 см)",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "from",
+        "fixedPrice": 0,
+        "priceFrom": 1500,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 1 500 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 40,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "turning",
+        "categoryId": "disks",
+        "name": "Токарная обработка диска",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "from",
+        "fixedPrice": 0,
+        "priceFrom": 500,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 500 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 50,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      }
+    ]
+  },
+  {
+    "id": "extra",
+    "name": "Дополнительные услуги",
+    "services": [
+      {
+        "id": "pressure-check",
+        "categoryId": "extra",
+        "name": "Проверка давления",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "from",
+        "fixedPrice": 0,
+        "priceFrom": 25,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "25–30 ₽",
+        "displayPriceLabelOverride": "25–30 ₽",
+        "priceBands": [
+          {
+            "label": "Базовый тариф",
+            "radiusLabels": [
+              "—"
+            ],
+            "price": 25
+          },
+          {
+            "label": "Повышенный тариф",
+            "radiusLabels": [
+              "—"
+            ],
+            "price": 30
+          }
+        ],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "airtight-check",
+        "categoryId": "extra",
+        "name": "Проверка диска на геометрию, шины на герметичность",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 50,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "50 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "remove-adhesive",
+        "categoryId": "extra",
+        "name": "Удаление следов скотча",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 200,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "200 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "sealing",
+        "categoryId": "extra",
+        "name": "Герметизация бортов",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "from",
+        "fixedPrice": 0,
+        "priceFrom": 100,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "100–150 ₽",
+        "displayPriceLabelOverride": "100–150 ₽",
+        "priceBands": [
+          {
+            "label": "Базовый тариф",
+            "radiusLabels": [
+              "—"
+            ],
+            "price": 100
+          },
+          {
+            "label": "Повышенный тариф",
+            "radiusLabels": [
+              "—"
+            ],
+            "price": 150
+          }
+        ],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "hub-clean",
+        "categoryId": "extra",
+        "name": "Зачистка ступицы / привалочной поверхности",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 50,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "50 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "copper-grease",
+        "categoryId": "extra",
+        "name": "Технологическая обработка ступицы медной смазкой",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 50,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "50 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "bag",
+        "categoryId": "extra",
+        "name": "Упаковка колеса (пакет)",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 50,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "50 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "camera-remove",
+        "categoryId": "extra",
+        "name": "Снятие автокамеры",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 75,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "75 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "camera-install",
+        "categoryId": "extra",
+        "name": "Установка автокамеры",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 75,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "75 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "wheel-optimization",
+        "categoryId": "extra",
+        "name": "Оптимизация колеса",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "matrix",
+        "fixedPrice": 0,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 80,
+            "suv": 80,
+            "offroad": 80,
+            "commercial": 220
+          },
+          "R14": {
+            "passenger": 80,
+            "suv": 80,
+            "offroad": 80,
+            "commercial": 220
+          },
+          "R15": {
+            "passenger": 90,
+            "suv": 90,
+            "offroad": 90,
+            "commercial": 220
+          },
+          "R16": {
+            "passenger": 90,
+            "suv": 90,
+            "offroad": 90,
+            "commercial": 220
+          },
+          "R17": {
+            "passenger": 100,
+            "suv": 100,
+            "offroad": 100,
+            "commercial": 220
+          },
+          "R18": {
+            "passenger": 100,
+            "suv": 100,
+            "offroad": 100,
+            "commercial": 220
+          },
+          "R19": {
+            "passenger": 150,
+            "suv": 150,
+            "offroad": 150,
+            "commercial": 220
+          },
+          "R20": {
+            "passenger": 170,
+            "suv": 170,
+            "offroad": 170,
+            "commercial": 220
+          },
+          "R21": {
+            "passenger": 200,
+            "suv": 200,
+            "offroad": 200,
+            "commercial": 220
+          },
+          "R22": {
+            "passenger": 200,
+            "suv": 200,
+            "offroad": 200,
+            "commercial": 220
+          },
+          "R23": {
+            "passenger": 200,
+            "suv": 200,
+            "offroad": 200,
+            "commercial": 220
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 80 ₽ до 220 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "disposal",
+        "categoryId": "extra",
+        "name": "Утилизация покрышки",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "from",
+        "fixedPrice": 0,
+        "priceFrom": 200,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 200 ₽",
+        "priceBands": [],
+        "salaryRuleType": "fixed",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 50,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "camera-used",
+        "categoryId": "extra",
+        "name": "Автокамера Б/У",
+        "serviceType": "additional",
+        "pricingMode": "product",
+        "priceType": "from",
+        "fixedPrice": 0,
+        "priceFrom": 1000,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 1 000 ₽",
+        "displayPriceLabelOverride": "от 1 000 ₽",
+        "priceBands": [
+          {
+            "label": "R13–R14",
+            "radiusLabels": [
+              "R13",
+              "R14"
+            ],
+            "price": 1000
+          },
+          {
+            "label": "R15–R16",
+            "radiusLabels": [
+              "R15",
+              "R16"
+            ],
+            "price": 1400
+          },
+          {
+            "label": "Коммерческий",
+            "radiusLabels": [
+              "R13C",
+              "R14C",
+              "R15C",
+              "R16C"
+            ],
+            "price": 1400
+          }
+        ],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 50,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "camera-new",
+        "categoryId": "extra",
+        "name": "Автокамера",
+        "serviceType": "additional",
+        "pricingMode": "product",
+        "priceType": "from",
+        "fixedPrice": 0,
+        "priceFrom": 1300,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 1 300 ₽",
+        "displayPriceLabelOverride": "от 1 300 ₽",
+        "priceBands": [
+          {
+            "label": "R13–R14",
+            "radiusLabels": [
+              "R13",
+              "R14"
+            ],
+            "price": 1300
+          },
+          {
+            "label": "R15–R16",
+            "radiusLabels": [
+              "R15",
+              "R16"
+            ],
+            "price": 1700
+          },
+          {
+            "label": "Коммерческий",
+            "radiusLabels": [
+              "R13C",
+              "R14C",
+              "R15C",
+              "R16C"
+            ],
+            "price": 1700
+          }
+        ],
+        "salaryRuleType": "fixed",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 100,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "restudding-standard",
+        "categoryId": "extra",
+        "name": "Ошиповка зимних шин ремонтным шипом Теком",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 16,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "16 ₽ / шип",
+        "displayPriceLabelOverride": "16 ₽ / шип",
+        "priceBands": [],
+        "salaryRuleType": "per_unit",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 2,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "restudding-michelin",
+        "categoryId": "extra",
+        "name": "Ошиповка зимних шин Michelin / Bridgestone",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 20,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "20 ₽ / шип",
+        "displayPriceLabelOverride": "20 ₽ / шип",
+        "priceBands": [],
+        "salaryRuleType": "per_unit",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 3,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "mechanic-work",
+        "categoryId": "extra",
+        "name": "Слесарные работы",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "manual",
+        "fixedPrice": 0,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "свободная цена",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 50,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      }
+    ]
+  },
+  {
+    "id": "sensors",
+    "name": "Датчики давления",
+    "services": [
+      {
+        "id": "bh-sensor",
+        "categoryId": "sensors",
+        "name": "Датчик давления BHSens ECS1420",
+        "serviceType": "additional",
+        "pricingMode": "product",
+        "priceType": "matrix",
+        "fixedPrice": 0,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 800,
+            "suv": 900,
+            "offroad": 1000,
+            "commercial": 1000
+          },
+          "R16": {
+            "passenger": 1200,
+            "suv": 1300,
+            "offroad": 1400,
+            "commercial": 1400
+          },
+          "R17": {
+            "passenger": 1400,
+            "suv": 1500,
+            "offroad": 1600,
+            "commercial": 1600
+          },
+          "R18": {
+            "passenger": 1600,
+            "suv": 1700,
+            "offroad": 1800,
+            "commercial": 1800
+          },
+          "R19": {
+            "passenger": 1800,
+            "suv": 1900,
+            "offroad": 2000,
+            "commercial": 2000
+          },
+          "R20": {
+            "passenger": 2200,
+            "suv": 2300,
+            "offroad": 2400,
+            "commercial": 2400
+          },
+          "R21": {
+            "passenger": 2500,
+            "suv": 2500,
+            "offroad": 2500,
+            "commercial": 2500
+          },
+          "R22": {
+            "passenger": 2500,
+            "suv": 2500,
+            "offroad": 2500,
+            "commercial": 2500
+          },
+          "R23": {
+            "passenger": 2500,
+            "suv": 2500,
+            "offroad": 2500,
+            "commercial": 2500
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 800 ₽ до 2 500 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_profit",
+        "salaryPercent": 40,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": true,
+        "costPrice": 1200,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      }
+    ]
+  },
+  {
+    "id": "rings",
+    "name": "Проставочные кольца",
+    "services": [
+      {
+        "id": "rings-default",
+        "categoryId": "rings",
+        "name": "Комплект проставочных колец",
+        "serviceType": "additional",
+        "pricingMode": "product",
+        "priceType": "manual",
+        "fixedPrice": 0,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "свободная цена",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 20,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      }
+    ]
+  },
+  {
+    "id": "locks",
+    "name": "Колёсные секретки",
+    "services": [
+      {
+        "id": "locks-set",
+        "categoryId": "locks",
+        "name": "Комплект колёсных секреток",
+        "serviceType": "additional",
+        "pricingMode": "product",
+        "priceType": "fixed",
+        "fixedPrice": 1400,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "1 400 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 20,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "locks-removal",
+        "categoryId": "locks",
+        "name": "Снятие секретки",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 800,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "800 ₽",
+        "priceBands": [],
+        "salaryRuleType": "percent_of_work",
+        "salaryPercent": 20,
+        "salaryFixedAmount": 0,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      }
+    ]
+  },
+  {
+    "id": "storage",
+    "name": "Хранение",
+    "services": [
+      {
+        "id": "storage-season",
+        "categoryId": "storage",
+        "name": "Хранение комплекта до сезона",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "from",
+        "fixedPrice": 0,
+        "priceFrom": 2500,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "от 2 500 ₽",
+        "priceBands": [],
+        "salaryRuleType": "fixed",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 100,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      },
+      {
+        "id": "storage-issue",
+        "categoryId": "storage",
+        "name": "Выдача комплекта с хранения",
+        "serviceType": "additional",
+        "pricingMode": "service",
+        "priceType": "fixed",
+        "fixedPrice": 200,
+        "priceFrom": 0,
+        "matrixPrices": {
+          "R13": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R14": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R15": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R16": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R17": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R18": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R19": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R20": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R21": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R22": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          },
+          "R23": {
+            "passenger": 0,
+            "suv": 0,
+            "offroad": 0,
+            "commercial": 0
+          }
+        },
+        "modifierMatrixPrices": {},
+        "modifierEnabled": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "modifierExplicitlyCleared": {
+          "low_profile": false,
+          "runflat": false
+        },
+        "displayPriceLabel": "200 ₽",
+        "priceBands": [],
+        "salaryRuleType": "fixed",
+        "salaryPercent": 35,
+        "salaryFixedAmount": 50,
+        "salaryPerUnitAmount": 0,
+        "usesCostPrice": false,
+        "costPrice": 0,
+        "reducedEmployeePercentEnabled": false,
+        "reducedEmployeePercentValue": 30
+      }
+    ]
+  }
+]
